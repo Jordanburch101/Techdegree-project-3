@@ -7,5 +7,40 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.5;
-    color: #9b9797;
+    color: #4e4e4e;
+    display: flex;
+    flex-direction: column;
 }
+
+
+label {
+    display: flex;
+    align-items: baseline; /* Baseline centering */
+}
+  
+input[type=radio] {
+    flex: none;
+    margin-right: 10px;
+}
+  
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+}
+
+
+/* ======CLASS STYLES======*/
+
+
+
+.container {
+    display: flex;
+    /* margin: 0 auto 0 auto; */
+}
+
+/* .col {
+    display: flex;
+    flex-direction: row;
+} */
+
+
