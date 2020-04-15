@@ -10,6 +10,7 @@ body {
     color: #8a8a8a;
     display: flex;
     flex-direction: column;    
+    
 
 }
 
@@ -41,10 +42,14 @@ footer {
     text-align: center;
     font-style: italic;
     font-weight: 500;
+    margin-top: -2em;
     margin-bottom: 10em;
 }
 
+
 /* ======INPUT STYLES======*/
+
+
 
 input[type=text],
 input[type=email],
@@ -57,9 +62,13 @@ textarea {
     border: white solid 1px;
     border-radius: 5px;
     background-color: rgb(236, 236, 236);
-
+    resize: none;
     
 }
+
+input[name="user_zip"] {
+    width: 50%;
+} 
 
 ::placeholder {
     text-align: right;
@@ -69,9 +78,7 @@ textarea {
     padding-right: 1EM;
 }
 
-#zip {
-    width: 50%;
-} 
+
 
 textarea {
     height: 100px;
@@ -89,25 +96,44 @@ button[type="submit"] {
     background-color: rgb(0, 194, 194);
 }
 
+
+/* ======PSEUDO INPUT STYLES======*/
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgb(19, 52, 68);
+    border:2px solid rgb(19, 52, 68);
+}
+
+
+button:hover {
+    outline: none;
+    background-color: rgb(209, 125, 0);
+}
+
 /* ======CHECKBOX STYLES======*/
 
-/* Hide the default checkbox */
-.custom-sq input[type=checkbox] {
+/* Hide default checkbox */
+.custom-checkbox input[type=checkbox] {
     display: none;
 }
 
 /*custom check box */
-.custom-sq {
+.custom-checkbox {
 font-size: 16px;
 line-height: 20px;
 padding-bottom: 1em;
 }
 
-.custom-sq label {
+.custom-checkbox label {
 cursor: pointer;
 }
 
-.custom-sq label:before {
+.custom-checkbox label:before {
 display: inline-block;
 width: 20px;
 margin-right: 5px;
@@ -117,20 +143,56 @@ background: #eee;
 border-radius: 5px;
 }
 
-.custom-sq label:hover::before{
-background: #aaa;
+.custom-checkbox label:hover::before{
+background: rgba(0, 195, 255, 0.404);
 }
 
 /* On check */
-.custom-sq input:checked ~ label:before {
+.custom-checkbox input:checked ~ label:before {
 content: "\2714";
-background: #3f6cb5;
+background: #00ffea;
 color: #fff;
 }
 
 /* ======RADIO STYLES======*/
 
+/* Hide default radio */
+.custom-raido input[type=radio] {
+    display: none;
+}
 
+/*custom radio */
+.custom-raido {
+font-size: 16px;
+line-height: 20px;
+padding-bottom: 1em;
+}
+
+.custom-raido label {
+cursor: pointer;
+}
+
+.custom-raido label:before {
+display: inline-block;
+width: 20px;
+margin-right: 5px;
+content: "\00a0";
+text-align: center;
+background: #eee;
+border-radius: 50%;
+}
+
+.custom-raido label:hover::before{
+background: rgba(0, 195, 255, 0.404);
+}
+
+/* On check */
+.custom-raido input:checked ~ label:before {
+content: "\ffed";
+background: #00ffea;
+color: #fff;
+font-size: 1em;
+}
 
 /* ======CLASS STYLES======*/
 
@@ -140,7 +202,6 @@ color: #fff;
     background-color: rgb(42, 54, 68);
     color: white;
     text-transform: uppercase;
-    padding: .5em;
 }
 
 .container {
@@ -161,13 +222,24 @@ color: #fff;
 .info {
     text-align: center;
     margin-top: -1em;
+    margin-bottom: 2em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title {
     font-size: 1.2em;
     color: black;
     font-weight: bold;
-   
+    display: inline-block;
+    margin-bottom: 1.2em;
+}
+
+.input-field {
+    color: #535353;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ======BODER STYLES======*/
@@ -200,25 +272,6 @@ label.check-label {
     margin-left: .3em;
 }
 
-/* ======PSEUDO STYLES======*/
-
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=tel]:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    box-shadow: 0px 0px 5px rgb(19, 52, 68);
-    border:2px solid rgb(19, 52, 68);
-}
-
-
-
-button:hover {
-    outline: none;
-    background-color: rgb(209, 125, 0);
-}
-
 /* ======DESKTOP STYLES======*/
 
 @media (min-width: 768px) {
@@ -227,4 +280,31 @@ button:hover {
         width: 720px;
     }
 
+    .signup {
+        margin-top: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .input-field {
+        display: flex;
+        flex-direction: row;
+    } 
+    
+    .input-field-item {
+        flex: 1 250px;
+        align-self: center;
+    }
+
+    .input-field-item2 {
+        flex: 20;
+        width: 30%;
+    }
+  
 }
