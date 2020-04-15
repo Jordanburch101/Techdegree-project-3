@@ -9,8 +9,8 @@ body {
 	line-height: 1.5;
     color: #8a8a8a;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
+
 }
 
   
@@ -19,14 +19,7 @@ fieldset {
     border: none;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(42, 54, 68);
-    color: white;
-    text-transform: uppercase;
-    padding: .5em;
-}
+
 
 h1 {
     font-size: 1.3em;
@@ -64,11 +57,16 @@ textarea {
     border: white solid 1px;
     border-radius: 5px;
     background-color: rgb(236, 236, 236);
-    text-align: right;
-    font-weight: lighter;
-    font-style: italic;
-    font-size: .8em;
+
     
+}
+
+::placeholder {
+    text-align: right;
+    font-size: .8em;
+    font-style: italic;
+    color: #bbbbbb;
+    padding-right: 1EM;
 }
 
 #zip {
@@ -91,29 +89,71 @@ button[type="submit"] {
     background-color: rgb(0, 194, 194);
 }
 
-input[type="checkbox"] {
-    background-color: rgb(2, 204, 255);
-}
+/* ======CHECKBOX STYLES======*/
 
-option[value=""][disabled] {
+/* Hide the default checkbox */
+.custom-sq input[type=checkbox] {
     display: none;
 }
 
+/*custom check box */
+.custom-sq {
+font-size: 16px;
+line-height: 20px;
+padding-bottom: 1em;
+}
+
+.custom-sq label {
+cursor: pointer;
+}
+
+.custom-sq label:before {
+display: inline-block;
+width: 20px;
+margin-right: 5px;
+content: "\00a0";
+text-align: center;
+background: #eee;
+border-radius: 5px;
+}
+
+.custom-sq label:hover::before{
+background: #aaa;
+}
+
+/* On check */
+.custom-sq input:checked ~ label:before {
+content: "\2714";
+background: #3f6cb5;
+color: #fff;
+}
+
+/* ======RADIO STYLES======*/
+
+
+
 /* ======CLASS STYLES======*/
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(42, 54, 68);
+    color: white;
+    text-transform: uppercase;
+    padding: .5em;
+}
 
 .container {
     display: flex;
     flex-direction: column;
-    margin: auto;
     flex-wrap: wrap;
-    margin-left: .5em;
-    margin-right: .5em;
-    
+    align-self: center;
+
 }
 
 .col {
     display: flex;
-    width: auto;
+    width: 320px;
 }
 
 
@@ -129,6 +169,8 @@ option[value=""][disabled] {
     font-weight: bold;
    
 }
+
+/* ======BODER STYLES======*/
 
 .double-border {
     background-color: rgb(255, 255, 255);
@@ -177,3 +219,12 @@ button:hover {
     background-color: rgb(209, 125, 0);
 }
 
+/* ======DESKTOP STYLES======*/
+
+@media (min-width: 768px) {
+
+    .col {
+        width: 720px;
+    }
+
+}
