@@ -15,15 +15,14 @@
             <h1>The Code Review</h1>
         </header>
 
-        <div class="signup container"> <!---Signup--->
+        <div class="signup"> <!---Signup--->
             <h2>Signup for our newsletter</h2>
             <p class="info">Get the latest news on how your code is doing right in your inbox!</p>
         </div>
 
-        <div class="container">
 
-            <form  action="index.html" method="post">
-                <div class="double-border"></div>
+            <form  action="index.html" method="post"> <!---Form--->
+                <div class="double-border"></div> <!-----Double Border-->
                 <fieldset class="col">
                     <legend><span class="title">Contact Information</span></legend>
 
@@ -35,14 +34,14 @@
                     <div class="input-field">
                         <label class="input-field-item" for="email">Email Address</label>
                         <input type="email" id="email" name="user_email" 
-                        placeholder="111-111-1111" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        placeholder="Required" required>
                     </div>
 
                     <div class="input-field">
                         <label class="input-field-item" for="phone">Phone Number</label>
                         <input type="tel" id="phone" name="user_phone" 
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        required placeholder="Required" required>
+                        placeholder="123-456-7890" required>
                     </div>
 
                     <div class="input-field">
@@ -124,18 +123,19 @@
                         </select> 
                     </div>
 
-                    <div class="input-field">
+                    <div class="input-field2">
                         <label class="input-field-item2" for="zip">Zip Code</label>
                         <input type="text" id="zip" name="user_zip">
+                        <p class="input-field-item3"></p>
                     </div>
                     
 
                 </fieldset>
 
-                <div class="border_2">
+                <div class="border_2"> <!---Second Border---->
                 </div>
 
-                <fieldset class="col">
+                <fieldset class="col newsletter">
                     <legend><span class="title">Newsletter</span></legend>
 
                     <h3>Select the newsletters you would like to recieve</h3>
@@ -175,7 +175,7 @@
                     </div><br>
                     
                     <label for="other_topics">Other topics you'd like to hear about:</label>
-                    <textarea id="other_topics" name="user_other_topics"></textarea>
+                    <textarea id="other_topics" name="user_other_topics" placeholder="Tell us your thoughts!"></textarea>
 
 
                     <button type="submit">Sign Up</button>
@@ -183,9 +183,9 @@
                 </fieldset>
                 
             </form>
-        </div>
 
-        <footer class="container">
+
+        <footer><!----Footer--->
             <p>Copyright The Code Review</p>
         </footer>
     </body>
