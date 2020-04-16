@@ -287,6 +287,10 @@ font-size: 1em;
 
 @media (min-width: 768px) {
 
+    .signup {
+        padding-top: 1em;
+    }
+
     h2 {
         font-size: 1.5em;
     }
