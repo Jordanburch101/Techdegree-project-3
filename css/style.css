@@ -10,7 +10,7 @@ body {
     color: #8a8a8a;
     display: flex;
     flex-direction: column;    
-    transition: all .3s;
+    justify-content: center;
 
 }
 
@@ -70,13 +70,6 @@ input[name="user_zip"] {
     width: 50%;
 } 
 
-/* ::placeholder {
-    text-align: right;
-    font-size: .8em;
-    font-style: italic;
-    color: #bbbbbb;
-    padding-right: 1EM;
-} */
 
 ::-webkit-input-placeholder {
     text-align: right;
@@ -226,9 +219,10 @@ font-size: 1em;
 
 .col {
     display: flex;  
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
+ 
 }
 
 
@@ -293,23 +287,6 @@ font-size: 1em;
 
 @media (min-width: 768px) {
 
-    .main-header {
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        z-index: 1000;
-        height: 70px;
-    }
-
-    body {
-        margin-top: 2em;
-    }
-
-    .signup {
-        margin-top: 2em;
-    }
-
-    
     h2 {
         font-size: 1.5em;
     }
