@@ -303,8 +303,14 @@ label.check-label {
     }
 
     .input-field-item2 {
-        flex: 20;
-        width: 30%;
+        flex: 1 50px;
+        align-self: center;
     }
+
+    input[name="user_zip"] {
+        width: 300px;
+        align-self: flex-start;
+        flex: 2;
+    } 
   
 }
