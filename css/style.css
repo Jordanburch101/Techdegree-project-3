@@ -38,13 +38,7 @@ h3 {
     font-weight: normal;
 }
 
-footer {
-    text-align: center;
-    font-style: italic;
-    font-weight: 500;
-    margin-top: -2em;
-    margin-bottom: 10em;
-}
+
 
 
 /* ======INPUT STYLES======*/
@@ -89,11 +83,12 @@ button[type="submit"] {
     font-weight: bold;
     color: white;
     width: 100%;
-    padding: 20px 22px;
-    margin: 25px 0 10px 0;
+    padding: 25px 25px;
+    margin: 20px 0 10px 0;
     border: white solid 1px;
     border-radius: 5px;
     background-color: rgb(0, 194, 194);
+
 }
 
 
@@ -222,6 +217,7 @@ font-size: 1em;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 0;
  
 }
 
@@ -251,6 +247,13 @@ font-size: 1em;
     flex-direction: column;
 }
 
+.footer {
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 10em;
+}
+
 /* ======BODER STYLES======*/
 
 .double-border {
@@ -273,11 +276,13 @@ font-size: 1em;
     left: 0;
     right: 0;
     
+    
 }
 
 .border_2 {
     border-top: black solid 2px;
-    padding-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     margin-left: 10%;
     margin-right: 10%;
 }
