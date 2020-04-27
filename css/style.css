@@ -211,9 +211,9 @@ font-size: 1em;
 } */
 
 
-
 .col {
     display: flex;  
+    flex-direction: column;
     justify-content: center;
     margin-left: 10%;
     margin-right: 10%;
