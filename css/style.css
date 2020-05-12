@@ -97,7 +97,7 @@ button[type="submit"] {
 input,
 select,
 textarea {
-    transition: background-color 1s ease-out;
+    transition: background-color .3s ease-out;
 }
 
 input[type=text]:focus,
@@ -108,7 +108,8 @@ select:focus {
     outline: none;
     box-shadow: 0px 0px 5px rgba(19, 52, 68, 0.603);
     border:2px solid rgba(19, 52, 68, 0.527);
-    background-color: rgba(0, 194, 194, 0.432);
+    background-color: rgba(71, 71, 71, 0.918);
+    color: #fff;
 }
 
 
